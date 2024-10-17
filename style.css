@@ -1,0 +1,83 @@
+/* General Styles */
+body {
+   
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.fonte_titulo { 
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+header {
+    background-color: #ffcc00;
+    padding: 2%; /* Usando porcentagem para ajuste mais fluido */
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5rem; /* Rem para ser relativo ao tamanho da fonte base */
+}
+
+/* Character Catalog */
+#character-catalog {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Define 4 cards por linha */
+    gap: 2%; /* Espaçamento entre os cards em porcentagem */
+    padding: 2%;
+}
+
+.character-card {
+    background-color: white;
+    border-radius: 0.5rem; /* Usando rem para cantos arredondados */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Sombra relativa ao tamanho */
+    text-align: center;
+    padding: 5%;
+    transition: transform 0.3s ease;
+    font-family: "Scope One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.character-card img {
+    width: 100%; /* A imagem vai ocupar 100% da largura disponível */
+    height: auto;
+    border-radius: 0.5rem 0.5rem 0 0; /* Usando rem */
+}
+
+.character-card h2 {
+    margin: 5% 0;
+    font-size: 1.5rem; /* Font-size relativo */
+    color: #ff5722;
+}
+
+.character-card p {
+    font-size: 1rem; /* Ajuste de fonte com rem */
+    color: #555;
+}
+
+/* Hover effect */
+.character-card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 75em) { /* Aproximadamente 1200px, mas usando "em" */
+    #character-catalog {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+    }
+}
+
+@media (max-width: 56.25em) { /* Aproximadamente 900px */
+    #character-catalog {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+    }
+}
+
+@media (max-width: 37.5em) { /* Aproximadamente 600px */
+    #character-catalog {
+        grid-template-columns: 1fr; /* 1 card por linha */
+    }
+}

@@ -1,6 +1,6 @@
-// Optional JavaScript for future interactivity
+// Teste para futuras interações
 document.querySelectorAll('.character-card').forEach(card => {
     card.addEventListener('click', () => {
-        alert(`You clicked on ${card.querySelector('h2').innerText}!`);
+        alert(`Você clicou em ${card.querySelector('h2').innerText}!`);
     });
 });
